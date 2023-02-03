@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Testing {
     public static void main(String[] args) {
         String name = "David";
@@ -25,7 +27,20 @@ class Testing {
         String test2 = new String("Check");
         // These are different objects in memory and are not equal
         System.out.println(test1 == test2); // false
-        // How to check if two objects contain the same string
+        // How to check if two objects contain the same string - Returns boolean
         System.out.println(test1.equals(test2)); // true
+
+
+        // User input Examples
+        // Create new 'scanner' - accept user input from the console
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hello, what is your name? ");
+        // store next input to console in variable
+        String userName = scanner.nextLine();
+        // print users input
+        System.out.println(userName);
+        // close the scanner - clear the memory
+        scanner.close();
     }
 }
