@@ -1,6 +1,7 @@
 import java.util.Scanner;
-import java.security.Key;
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 class Testing {
     public static void main(String[] args) {
@@ -117,5 +118,34 @@ class Testing {
         // print out sorted array
         System.out.println(Arrays.toString(letters));
         System.out.println(foundItemIndex);
+
+        // Array List Examples
+        //---------------------
+        
+        ArrayList<Integer> numberList = new ArrayList<Integer>(); // Empty array list of integers
+        // Add elements to arrayList
+        numberList.add(4);
+        numberList.add(2);
+        numberList.add(1);
+        numberList.add(5);
+        numberList.add(3);
+        // Change element at index 2 to the 2nd argument
+        numberList.set(2, Integer.valueOf(30));
+        numberList.set(2, 30); // alternative syntax to the above
+        System.out.println(numberList.toString());
+
+        // Sort an arrayList -- Uses 'Comparator' class and 'naturalOrder' method (low to high, a-z)
+        // 'reverseOrder' can sort high to low (z-a)
+        numberList.sort(Comparator.naturalOrder());
+        numberList.sort(Comparator.reverseOrder());
+
+        // .size() method will return int of the number of elements in the arrayList
+        // .contains() method will return true or false if there is a matching element
+        // .isEmpty() method will return true or false depending on if arrayList contains any elements or not
+        // .clear() method will remove ALL elements in an arrayList
+
+
+        // Print out the sorted arrayList
+        System.out.println(numberList.toString());
     }
 }
