@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 
 class Testing {
     public static void main(String[] args) {
@@ -147,5 +148,26 @@ class Testing {
 
         // Print out the sorted arrayList
         System.out.println(numberList.toString());
+
+        // HashMap Examples
+        //-------------------
+
+        HashMap<String, Integer> cars = new HashMap<String, Integer>();
+
+        // Add items to HashMap
+        cars.put("Corvette", 2020);
+        cars.put("Camaro", 1972);
+        cars.put("Firebird", 1967);
+        cars.put("Silverado", 2021);
+        cars.put("Tahoe", 2018);
+
+        System.out.println(cars.toString());
+
+        cars.forEach((model, year) -> {
+            cars.replace(model, year - 1);
+        });
+
+        System.out.println(cars.toString());
+
     }
 }
