@@ -62,16 +62,43 @@ class Testing {
         String operator = scanner.nextLine();
         System.out.printf("You chose %s %n", operator);
 
-        if (operator.equals("x")||operator.equals("*")) {
-            System.out.printf("%f * %f = %f", calcNum1, calcNum2, calcNum1 * calcNum2);
-        } else if (operator.equals("-")) {
-            System.out.printf("%f - %f = %f", calcNum1, calcNum2, calcNum1 - calcNum2);
-        } else if (operator.equals("+")) {
-            System.out.printf("%f + %f = %f", calcNum1, calcNum2, calcNum1 + calcNum2);
-        } else if (operator.equals("/")) {
-            System.out.printf("%f / %f = %f", calcNum1, calcNum2, calcNum1 / calcNum2);
-        } else {
-            System.out.printf("Invalid operation! Please restart and try again", calcNum1, calcNum2, calcNum1 + calcNum2);
+        // // Calculator logic using if/else statements
+        // if (operator.equals("x")||operator.equals("*")) {
+        //     System.out.printf("%f * %f = %f", calcNum1, calcNum2, calcNum1 * calcNum2);
+        // } else if (operator.equals("-")) {
+        //     System.out.printf("%f - %f = %f", calcNum1, calcNum2, calcNum1 - calcNum2);
+        // } else if (operator.equals("+")) {
+        //     System.out.printf("%f + %f = %f", calcNum1, calcNum2, calcNum1 + calcNum2);
+        // } else if (operator.equals("/")) {
+                // if (calcNum2 == 0){
+                    // System.out.println("You can not divide by zero!")
+                // } else {
+        //     System.out.printf("%f / %f = %f", calcNum1, calcNum2, calcNum1 / calcNum2);
+                // }
+        // } else {
+        //     System.out.printf("Invalid operation! Please restart and try again", calcNum1, calcNum2, calcNum1 + calcNum2);
+        // }
+
+        // Calculator logic using switch statements
+        switch (operator) {
+            case "+":
+                System.out.printf("%f + %f = %f", calcNum1, calcNum2, calcNum1 + calcNum2);
+                break;
+            case "-":
+                System.out.printf("%f - %f = %f", calcNum1, calcNum2, calcNum1 - calcNum2);
+                break;
+            case "*":
+            case "x":
+                System.out.printf("%f * %f = %f", calcNum1, calcNum2, calcNum1 * calcNum2);
+                break;
+            case "/":
+                if (calcNum2 == 0){ // catch if trying to divide by 0
+                    System.out.println("You can't divide by zero!!");
+                }
+                System.out.printf("%f / %f = %f", calcNum1, calcNum2, calcNum1 / calcNum2);
+                break;
+            default:
+                System.out.println("Invalid operation!");
         }
         System.out.println();
         scanner.close();
