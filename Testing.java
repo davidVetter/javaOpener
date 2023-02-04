@@ -58,7 +58,7 @@ class Testing {
         double calcNum2 = scanner.nextDouble();
         scanner.nextLine();
         System.out.printf("You entered: %s %n", calcNum2);
-        System.out.println("Please enter the operation you want to perform ('x or *' for multiply, '/' for divide,, '+' for addition and '-' for subtraction)");
+        System.out.println("Please enter the operation you want to perform ('x' or '*' for multiply, '/' for divide,, '+' for addition and '-' for subtraction)");
         String operator = scanner.nextLine();
         System.out.printf("You chose %s %n", operator);
 
