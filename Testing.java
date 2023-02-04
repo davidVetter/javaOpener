@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.security.Key;
+import java.util.Arrays;
 
 class Testing {
     public static void main(String[] args) {
@@ -102,5 +104,18 @@ class Testing {
         }
         System.out.println();
         scanner.close();
+
+        // Array examples
+        
+        // declare an array of characters
+        char letters[] = {'r', 'u', 'h', 'b', 'y'};
+        char key = 'h';
+        // Sort the array in alphabetical order
+        Arrays.sort(letters); // add a starting index and stopping index as 2nd and 3rd argument
+        //Search an array
+        int foundItemIndex = Arrays.binarySearch(letters, key); // returns the index if value is found -- MUST BE SORTED FIRST --
+        // print out sorted array
+        System.out.println(Arrays.toString(letters));
+        System.out.println(foundItemIndex);
     }
 }
